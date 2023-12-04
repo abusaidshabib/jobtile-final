@@ -1,0 +1,22 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+}
+
+.notice-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}

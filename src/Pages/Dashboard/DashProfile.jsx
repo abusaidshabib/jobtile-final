@@ -1,0 +1,5 @@
+const DashProfile = () => {
+  return <div></div>;
+};
+
+export default DashProfile;
