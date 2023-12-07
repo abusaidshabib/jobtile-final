@@ -6,6 +6,7 @@ export default {
       primary: ["Montserrat", "sans-serif"],
       secondary: ["Poiret One", "cursive"],
       neural: ["Young Serif", "serif"],
+      roboto: ["Roboto", "sans-serif"],
     },
     extend: {
       colors: {

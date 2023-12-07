@@ -7,6 +7,7 @@ const initialState = {
   languageData: [],
   webLink: [],
   experience: [],
+  project: []
 };
 
 export const formSlice = createSlice({
