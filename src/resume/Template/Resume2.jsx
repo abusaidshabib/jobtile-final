@@ -1,50 +1,85 @@
+/* eslint-disable react/prop-types */
 import { IoPersonOutline } from "react-icons/io5";
 import { SlBadge, SlGraduation, SlPuzzle } from "react-icons/sl";
 import { FaDesktop } from "react-icons/fa";
 import { CiFlag1 } from "react-icons/ci";
 import { BiBriefcase } from "react-icons/bi";
 
-const Resume2 = () => {
+const Resume2 = ({
+  personalData,
+  educationData,
+  skills,
+  languageData,
+  webLink,
+  experience,
+  project,
+}) => {
+  const {
+    firstName,
+    lastName,
+    jobTitle,
+    psummary,
+    address1,
+    address2,
+    phone,
+    email,
+    github,
+    linkedin,
+  } = personalData;
+
   return (
     <div className="font-roboto">
       <div>
-        <p className="text-3xl font-semibold">John Smith</p>
-        <p className="text-lg">IT Project Manager</p>
-        <p className="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis et
-          eaque optio perspiciatis quibusdam numquam suscipit minus odit,
-          corrupti quas illum? Autem ex praesentium qui beatae culpa repellendus
-          harum corporis?
+        <p className="text-3xl font-semibold">
+          {firstName}&nbsp;{lastName}
         </p>
+        <p className="text-lg">{jobTitle}</p>
+        <p className="">{psummary}</p>
       </div>
       <div className="grid grid-cols-9 pt-5 gap-12">
         <div className="col-span-3 grid gap-2">
-          <div>
-            <p className="font-bold flex items-end gap-2 border-b pb-1 border-main-v7">
-              <span className="bg-pri-v5 rounded-full">
-                <IoPersonOutline className="text-pri-v1 p-1" size={25} />
-              </span>
-              Personal Info
-            </p>
-            <ul className=" py-2 grid gap-2">
-              <li>
-                <p className="font-bold">Address</p>
-                <p>Poland, Me</p>
-              </li>
-              <li>
-                <p className="font-bold">Phone</p>
-                <p>774-987-4009</p>
-              </li>
-              <li>
-                <p className="font-bold">Linkedin</p>
-                <p>linkedin.com</p>
-              </li>
-              <li>
-                <p className="font-bold">Email</p>
-                <p>abusaidshabib712@gmail.com</p>
-              </li>
-            </ul>
-          </div>
+          {personalData && (
+            <div>
+              <p className="font-bold flex items-end gap-2 border-b pb-1 border-main-v7">
+                <span className="bg-pri-v5 rounded-full">
+                  <IoPersonOutline className="text-pri-v1 p-1" size={25} />
+                </span>
+                Personal Info
+              </p>
+              <ul className=" py-2 grid gap-2">
+                {address1 && (
+                  <li>
+                    <p className="font-bold">Address</p>
+                    <p>{address1}</p>
+                  </li>
+                )}
+                {phone && (
+                  <li>
+                    <p className="font-bold">Phone</p>
+                    <p>{phone}</p>
+                  </li>
+                )}
+                {email && (
+                  <li>
+                    <p className="font-bold">Email</p>
+                    <p>{email}</p>
+                  </li>
+                )}
+                {linkedin && (
+                  <li>
+                    <p className="font-bold">Linkedin</p>
+                    <p>{linkedin}</p>
+                  </li>
+                )}
+                {github && (
+                  <li>
+                    <p className="font-bold">Github</p>
+                    <p>{github}</p>
+                  </li>
+                )}
+              </ul>
+            </div>
+          )}
           <div>
             <p className="font-bold flex items-end gap-2 border-b pb-1 border-main-v7">
               <span className="bg-pri-v5 rounded-full">

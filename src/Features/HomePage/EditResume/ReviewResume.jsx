@@ -26,7 +26,7 @@ const ReviewResume = () => {
       <div className="bg-white rounded-md font-roboto">
         <div ref={printRef} className="p-8">
           {/* <Resume1 {...resumeData} /> */}
-          <Resume2 />
+          <Resume2 {...resumeData} />
         </div>
       </div>
     </div>

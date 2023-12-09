@@ -82,6 +82,18 @@ export const formFields = [
     class: class1,
   },
   {
+    name: "github",
+    label: "Github link",
+    type: "url",
+    class: class1,
+  },
+  {
+    name: "linkedin",
+    label: "Linkedin link",
+    type: "url",
+    class: class1,
+  },
+  {
     name: "psummary",
     label: "Personal Summary",
     type: "text",
