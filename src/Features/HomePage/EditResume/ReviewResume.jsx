@@ -1,9 +1,11 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import { useSelector } from "react-redux";
 import { GoDownload } from "react-icons/go";
 import Resume1 from "../../../resume/Template/Resume1";
 import Resume2 from "../../../resume/Template/Resume2";
+import Resume3 from "../../../resume/Template/Resume3";
+import { resumeTemplate } from "../../../Json/resumeForm";
 
 const ReviewResume = () => {
   const printRef = useRef();
@@ -13,6 +15,11 @@ const ReviewResume = () => {
   const handlePrint = useReactToPrint({
     content: () => printRef.current,
   });
+  const selected = useSelector((state) => state.select.template);
+
+  const selectedTemplate = resumeTemplate[selected].template;
+  console.log("value", resumeTemplate[selected]);
+
 
   return (
     // <div className="bg-slate-500 max-h-screen xl:fixed xl:overflow-y-scroll grid place-content-center xl:top-0 xl:right-0 xl:bottom-0 w-1/2 lg:p-24 md:p-16 p-8 relative">
@@ -26,7 +33,10 @@ const ReviewResume = () => {
       <div className="bg-white rounded-md font-roboto">
         <div ref={printRef} className="p-8">
           {/* <Resume1 {...resumeData} /> */}
-          <Resume2 {...resumeData} />
+          {/* <Resume2 {...resumeData} /> */}
+          {/* {resumeTemplate[]} */}
+          {/* <Resume3 {...resumeData} /> */}
+          {React.cloneElement(selectedTemplate, { ...resumeData })}
         </div>
       </div>
     </div>

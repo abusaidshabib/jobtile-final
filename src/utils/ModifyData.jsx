@@ -77,3 +77,12 @@ export const modifyProject = (formData) => {
 
   return arrayOfObjects;
 };
+
+export const modifyCertificate = (formData) => {
+  return Object.keys(formData)
+    .filter((key) => key.startsWith("certificate"))
+    .map((key) => ({
+      certificate: formData[key],
+      details: formData[key.replace("certificate", "details")],
+    }));
+};

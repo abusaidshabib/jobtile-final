@@ -7,7 +7,8 @@ const initialState = {
   languageData: [],
   webLink: [],
   experience: [],
-  project: []
+  project: [],
+  certificate: [],
 };
 
 export const formSlice = createSlice({
@@ -35,6 +36,9 @@ export const formSlice = createSlice({
     setProjectData: (state, action) => {
       state.project = action.payload;
     },
+    setCertificateData: (state, action) => {
+      state.certificate = action.payload;
+    },
   },
 });
 
@@ -46,5 +50,6 @@ export const {
   setExperience,
   setPersonal,
   setProjectData,
+  setCertificateData,
 } = formSlice.actions;
 export default formSlice.reducer;

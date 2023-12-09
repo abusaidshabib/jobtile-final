@@ -1,3 +1,9 @@
+import Resume1 from "../resume/Template/Resume1";
+import Resume2 from "../resume/Template/Resume2";
+import Resume3 from "../resume/Template/Resume3";
+import res1 from "../assets/resume/1.jpg";
+import res2 from "../assets/resume/2.jpg";
+
 const class1 = "";
 const class2 = "col-span-2";
 
@@ -240,5 +246,47 @@ export const Language = [
     label: "Expertise level",
     type: "text",
     class: class1,
+  },
+];
+
+export const Certificate = [
+  {
+    name: "certificate",
+    label: "Certificate Title",
+    type: "text",
+    class: class1,
+  },
+  {
+    name: "details",
+    label: "Write a short details",
+    type: "text",
+    class: class1,
+  },
+];
+
+export const resumeTemplate = [
+  {
+    id: 1,
+    template: <Resume1 />,
+    img: res1,
+    title: "Job-winning resume templates",
+    details:
+      "Each resume template is expertly designed and follows the exact “resume rules” hiring managers look for. Stand out and get hire faster with field-tested resume templates.",
+  },
+  {
+    id: 2,
+    template: <Resume2 />,
+    img: res2,
+    title: "Job-winning resume templates",
+    details:
+      "Each resume template is expertly designed and follows the exact “resume rules” hiring managers look for. Stand out and get hire faster with field-tested resume templates.",
+  },
+  {
+    id: 3,
+    template: <Resume3 />,
+    img: res1,
+    title: "Job-winning resume templates",
+    details:
+      "Each resume template is expertly designed and follows the exact “resume rules” hiring managers look for. Stand out and get hire faster with field-tested resume templates.",
   },
 ];

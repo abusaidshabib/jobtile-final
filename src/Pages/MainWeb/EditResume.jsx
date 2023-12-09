@@ -7,6 +7,7 @@ import AddProject from "../../Features/HomePage/EditResume/AllForms/AddProject";
 import WebsiteLinks from "../../Features/HomePage/EditResume/AllForms/WebsiteLinks";
 import AddLanguage from "../../Features/HomePage/EditResume/AllForms/AddLanguage";
 import ReviewResume from "../../Features/HomePage/EditResume/ReviewResume";
+import AddCertificate from "../../Features/HomePage/EditResume/AllForms/AddCertificate";
 
 const EditResume = () => {
   return (
@@ -71,6 +72,10 @@ const EditResume = () => {
           <br />
           <p className="text-2xl font-young pb-5">Language</p>
           <AddLanguage />
+          <br />
+          <br />
+          <p className="text-2xl font-young pb-5">Certificate</p>
+          <AddCertificate />
         </form>
       </div>
       <ReviewResume />
